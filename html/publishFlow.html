@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布流量任务</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/publishFlow.css">
+</head>
+<body>
+	<div class="content">
+		<div class="left">
+			<ul class="shop">
+				<li class="fixed">我是商家</li>
+				<li>个人中心</li>
+				<li>绑定店铺</li>
+				<li>我的工单</li>
+			</ul>
+			<ul class="flowTask">
+				<li class="fixed">流量任务</li>
+				<li>发布流量任务</li>
+				<li>我的流量任务</li>
+				<li>截图监控</li>
+			</ul>
+			<ul class="task">
+				<li class="fixed">垫付任务</li>
+				<li>发布补单</li>
+				<li>我的任务</li>
+				<li>账单管理</li>
+				<li>历史账单管理</li>
+				<li>订单审核</li>
+				<li>我的快递</li>
+				<li>发布好评</li>
+				<li>评价审核</li>
+				<li>催下单/收货</li>
+			</ul>
+			<ul class="money">
+				<li class="fixed">财务中心</li>
+				<li>账单充值</li>
+				<li>提现管理</li>
+				<li>会员续费</li>
+				<li>资金记录</li>
+			</ul>
+			<ul class="qita">
+				<li class="fixed">其他</li>
+				<li>邀请好友</li>
+			</ul>
+		</div>
+		<div class="right">
+			<h3>发布任务</h3>
+			<div class="title">
+				<div class="first_title">
+					<span class="first">1、选择任务类型</span><span>2、填写宝贝信息</span><span>3、填写任务信息</span><span>4、增值服务，支付</span>
+				</div>
+				<div class="second_title" style="display: none;">
+					<span class="first">1、选择任务类型</span><span class="second">2、填写宝贝信息</span><span>3、填写任务信息</span><span>4、增值服务，支付</span>
+				</div>
+				<div class="third_title" style="display: none;">
+					<span class="first">1、选择任务类型</span><span class="second">2、填写宝贝信息</span><span class="third">3、填写任务信息</span><span>4、增值服务，支付</span>
+				</div>
+				<div class="fourth_title" style="display: none;">
+					<span class="first">1、选择任务类型</span><span class="second">2、填写宝贝信息</span><span class="third">3、填写任务信息</span><span class="fourth">4、增值服务，支付</span>
+				</div>
+			</div>
+			<div class="first_step">
+				<h3>第一步：选择任务类型</h3>
+				<div class="table">
+					<span>选择店铺</span>
+					<input type="radio" name="shop" value="威斯可照明旗舰店" checked>威斯可照明旗舰店
+					<input type="radio" name="shop" value="蜀源照明">蜀源照明
+					<a href="#" class="bind">绑定新店铺</a>
+					<br>
+					<span>任务类型</span>
+					<input type="radio" name="type" value="ORDER" checked>常规搜索
+					<input type="radio" name="type" value="SUBWAY">直通车
+					<input type="radio" name="type" value="TKL">淘口令
+					<input type="radio" name="type" value="JHS">聚划算
+					<input type="radio" name="type" value="TQG">淘抢购
+					<input type="radio" name="type" value="TKMP">淘客秒拍
+					<input type="radio" name="type" value="TJB">淘金币
+					<input type="radio" name="type" value="TTTJ">天天特价
+					<input type="radio" name="type" value="RWM">二维码
+					<input type="radio" name="type" value="ZWTG">其他活动推广
+					<div class="hide" style="display: none;">
+						<span>进入路径</span><input type="text" name="enterUrl">
+						<br>
+						<span class="tip">进入路径请填写【淘口令】或活动页面查找商品的路径</span>
+					</div>
+					<div id="erweima" style="display:none">
+							<div class="panelLine mt10">
+							<span class="secondTile floatLeft mr20">上传二维码</span>
+							<input type="text" placeholder=""
+							id="erweimaUrl" name="erweimaUrl" value=""
+							class="form-control w50 required inputText" style="width: 450px;">
+								<input type="button" id="btnUploadtgImg"
+									value="上传二维码图" /> <span
+									class="text-color-999 aw-upload-tips hidden-xs"> 允许 :
+									jpg,png,gif </span>
+							</div>
+							<div id="imgBoxtgImg">
+								<img id="ewmtgImg" style="margin-left:100px;" width="100px" height="100px"
+									name="tgImg" src="" />
+							</div>
+					</div>	
+					<span>延时发布</span>
+					<select name="publish" id="publishTime">
+						<option value="0">立即发布</option>	
+						<option value="60">1小时之后发布</option>	
+						<option value="180">3小时之后发布</option>	
+						<option value="360">6小时之后发布</option>	
+						<option value="540">9小时之后发布</option>	
+						<option value="720">12小时之后发布</option>	
+						<option value="1080">18小时之后发布</option>	
+						<option value="1440">1天之后发布</option>	
+						<option value="2880">2天之后发布</option>	
+						<option value="4320">3天之后发布</option>	
+						<option value="5760">4天之后发布</option>	
+						<option value="7200">5天之后发布</option>	
+						<option value="8640">6天之后发布</option>	
+						<option value="10080">7天之后发布</option>	
+						<option value="11520">8天之后发布</option>	
+						<option value="12960">9天之后发布</option>
+					</select>
+					<span>如需要发布第二天的任务，请选择延时时间</span>	
+				</div>
+				<a href="#" class="next">下一步</a>
+			</div>
+			<div class="second_step" style="display: none;">
+				<h3>第二步:填写宝贝信息</h3>
+				<div class="second_content">
+					<span>商品标题</span>
+					<input type="text" name="productTitle">
+					<br>
+					<span>商品链接</span>
+					<input type="url" name="productUrl">
+					<br>	
+					<!-- <span>商品主图</span>
+					<input id="File1" type="file"  accept=".jpg,.png,.gif" value="上传二维码图">
+					<span>允许 : jpg,png,gif</span>
+					 -->
+					<div class="aw-publish-title">
+						<div class="panelLine mt10">
+							<label>商品主图</label>
+							<input type="text"
+								id="txtItemPicUrl" name="itemPicUrl" value=""
+								class="form-control w50 required inputText" style="width: 450px;">
+							<input type="button" id="btnUploadDisplayPicturefiles"
+								value="选择并上传主图" /> <span
+								class="text-color-999 aw-upload-tips hidden-xs"> 允许 :
+								jpg,png,gif </span>
+						</div>
+						<div id="imgBox" style="margin-left: 2%; margin-top: 10px;">
+							<img id="itemImg" style="margin-left:58px" width="100px" height="100px"
+								name="itemImg" src="" />
+						</div>
+					</div>
+					<div class="subwayBoxs">
+						<div class="subwayPancel" style="display:none;">
+							<div class="panelLine sec subway >
+								<span class=" ls
+								floatLeftitemPic">
+								直通车图 <span class="red bold">*</span> </span> <input type="text"
+									class="inputText floatLeft ls long required"
+									id="txtItemSubwayPicUrl" name="itemSubwayPicUrl" value=""
+									itemPic="" />
+								<div class="floatLeft" id="subwayBox">
+									<input type="button" id="btnPickfiles1" value="选择并上传直通车图" />
+								</div>
+							</div>
+								
+							<div class="pic-box subway" id="imgSubwayWrapperInStep1">
+								<img id="imgSubway" name="itemImg" src="" />
+							</div>
+						</div>
+					</div>
+					<div class="panelBox panelBox1" style="display:none;" style="margin: 10px 0;"
+						id="subwayPancel">
+						<a class="subwayplusBlockBtn" id="subwayplusBlockBtn" style="color: #1f9cd8;" href="javascript:;"
+							> <i class="iconfont" style="font-size: 20px;">&#xf0154;</i>
+							<span>点击可多添加1个直通车图（最多可添加3个直通车图）</span>
+						</a>
+					</div>
+					<br>
+					<span>商品单价</span>
+					<input type="number" name="productPrice">
+					<span>元</span>
+					<span>自然搜索看到的价格</span>
+					<br>
+					<span class="tip">友情提醒： 【搜索任务】请确保根据提供的"关键词"和"筛选条件"搜索宝贝，能找到宝贝且排名在淘宝APP的前10页。</span>
+					<div class="erweimaSpecial" style="display: none;">
+						<span>活动任务类型</span>
+						<input type="text" value="二维码" readonly="">
+					</div>
+					<div class="add_keyword">
+						<div class="keyword">
+							<h4>搜索关键字方案</h4>
+							<span>关键词</span>
+							<input type="text" name="keyword">
+							<br>
+							<div class="searchMethod">
+								<span>搜索方式</span>
+								<a href="javascript:;">淘宝搜索</a>
+								<a href="javascript:;">天猫搜索</a>
+							</div>
+							<div class="chooseMethod">
+								<span>筛选条件-排序方式</span>
+								<a href="javascript:;">综合</a>
+								<a href="javascript:;">销量</a>
+								<a href="javascript:;">信用</a>
+								<a href="javascript:;">价格低到高</a>
+								<a href="javascript:;">价格高到低</a>
+							</div>
+							<span>筛选条件-发货地</span>
+							<a href="javascript:;" class="fahuoArea">全国</a>
+							<div class="choose_fahuoArea" style="display: none;">
+								<div class="list-innerwrap">
+									<ul class="area">
+										<li><a class="address" href="javascript:;">全国</a></li>
+									</ul>
+								</div>
+								<div class="list-innerwrap">
+									<ul class="area">
+										<span class="area-title">区域</span>
+										<li><a class="address" href="javascript:;">江浙沪</a></li>
+										<li><a class="address" href="javascript:;">珠三角</a></li>
+										<li><a class="address" href="javascript:;">港澳台</a></li>
+										<li><a class="address" href="javascript:;">海外</a></li>
+									</ul>
+								</div>
+								<div class="list-innerwrap">
+									<ul class="city">
+										<span class="area-title">城市</span>
+										<li><a class="address" href="javascript:;">北京</a></li>
+										<li><a class="address" href="javascript:;">上海</a></li>
+										<li><a class="address" href="javascript:;">广州</a></li>
+										<li><a class="address" href="javascript:;">深圳</a></li>
+										<li><a class="address" href="javascript:;">杭州</a></li>
+										<li><a class="address" href="javascript:;">温州</a></li>
+										<li><a class="address" href="javascript:;">宁波</a></li>
+										<li><a class="address" href="javascript:;">南京</a></li>
+										<li><a class="address" href="javascript:;">苏州</a></li>
+										<li><a class="address" href="javascript:;">济南</a></li>
+										<li><a class="address" href="javascript:;">青岛</a></li>
+										<li><a class="address" href="javascript:;">大连</a></li>
+										<li><a class="address" href="javascript:;">无锡</a></li>
+										<li><a class="address" href="javascript:;">合肥</a></li>
+										<li><a class="address" href="javascript:;">天津</a></li>
+										<li><a class="address" href="javascript:;">长沙</a></li>
+										<li><a class="address" href="javascript:;">武汉</a></li>
+										<li><a class="address" href="javascript:;">郑州</a></li>
+										<li><a class="address" href="javascript:;">石家庄</a></li>
+										<li><a class="address" href="javascript:;">成都</a></li>
+										<li><a class="address" href="javascript:;">重庆</a></li>
+										<li><a class="address" href="javascript:;">西安</a></li>
+										<li><a class="address" href="javascript:;">昆明</a></li>
+										<li><a class="address" href="javascript:;">南宁</a></li>
+										<li><a class="address" href="javascript:;">福州</a></li>
+										<li><a class="address" href="javascript:;">厦门</a></li>
+										<li><a class="address" href="javascript:;">南昌</a></li>
+										<li><a class="address" href="javascript:;">东莞</a></li>
+										<li><a class="address" href="javascript:;">沈阳</a></li>
+										<li><a class="address" href="javascript:;">长春</a></li>
+										<li><a class="address" href="javascript:;">哈尔滨</a></li>
+									</ul>
+								</div>
+								<div class="list-innerwrap">
+									<ul class="province">
+										<span class="area-title">省份</span>
+										<li><a class="address" href="javascript:;">安徽</a></li>
+										<li><a class="address" href="javascript:;">福建</a></li>
+										<li><a class="address" href="javascript:;">甘肃</a></li>
+										<li><a class="address" href="javascript:;">广东</a></li>
+										<li><a class="address" href="javascript:;">广西</a></li>
+										<li><a class="address" href="javascript:;">贵州</a></li>
+										<li><a class="address" href="javascript:;">海南</a></li>
+										<li><a class="address" href="javascript:;">河北</a></li>
+										<li><a class="address" href="javascript:;">河南</a></li>
+										<li><a class="address" href="javascript:;">湖北</a></li>
+										<li><a class="address" href="javascript:;">湖南</a></li>
+										<li><a class="address" href="javascript:;">江苏</a></li>
+										<li><a class="address" href="javascript:;">黑龙江</a></li>
+										<li><a class="address" href="javascript:;">江西</a></li>
+										<li><a class="address" href="javascript:;">吉林</a></li>
+										<li><a class="address" href="javascript:;">辽宁</a></li>
+										<li><a class="address" href="javascript:;">内蒙古</a></li>
+										<li><a class="address" href="javascript:;">宁夏</a></li>
+										<li><a class="address" href="javascript:;">青海</a></li>
+										<li><a class="address" href="javascript:;">山东</a></li>
+										<li><a class="address" href="javascript:;">山西</a></li>
+										<li><a class="address" href="javascript:;">陕西</a></li>
+										<li><a class="address" href="javascript:;">四川</a></li>
+										<li><a class="address" href="javascript:;">西藏</a></li>
+										<li><a class="address" href="javascript:;">新疆</a></li>
+										<li><a class="address" href="javascript:;">云南</a></li>
+										<li><a class="address" href="javascript:;">浙江</a></li>
+										<li><a class="address" href="javascript:;">香港</a></li>
+										<li><a class="address" href="javascript:;">澳门</a></li>
+										<li><a class="address" href="javascript:;">台湾</a></li>
+									</ul>
+								</div>
+							</div>
+							<br>
+							<span>筛选条件-价格区间</span>	
+							<input type="number" name="low">元-<input type="number" name="high">元	
+						</div>
+					</div>
+					<a href="javascript:;" class="add">点击可多添加1个搜索关键字方案（最多可添加10个方案）</a>
+					<br>
+					<a href="javascript:;" class="second_last">上一步</a>	
+					<a href="javascript:;" class="second_next">下一步</a>	
+				</div>
+			</div>
+			<div class="third_step" style="display: none;">
+				<h3>第三步:填写任务信息</h3>
+				<div class="third_content">
+					<div class="tip">
+						友情提醒：
+						<br>1，【搜索关键词方案】"浏览数量"必填并且必须大于5个流览量，收藏商品等其他的任务不需要可以不填；
+						<br>
+						2，买手做任务，"浏览数量"包含一张搜索截图和一张宝贝详情图，收藏商品等其他的任务包含一张对应的截图
+						<br>
+						3，【任务配比】建议"浏览数量"："收藏商品"："收藏店铺"："加购物车"的比例维持在10：3：3：2。
+						<br>
+						4，宝贝在不同的时期，根据情况对比例做相应的调整
+						<br>
+						5，"浏览好评","领优惠券","旺旺聊天"可以随机配一部分,提高流量真实性。
+					</div>
+					<div class="keyMethod">
+						<div class="keyDetail" style="display: none">
+							<span>寻找宝贝路径说明:</span>
+							<span class="keyName">聚划算</span>
+							<br>
+							<span>浏览数量</span>
+							<input type="number" name="liulanNumber">
+							<span>收藏商品</span>
+							<input type="number" name="collectProduct"> 
+							<span>收藏店铺</span>
+							<input type="number" name="collectShop">
+							<span>加购物车</span>
+							<input type="number" name="addCar">
+							<br>
+							<span>浏览好评</span>
+							<input type="number" name="liulanGood">
+							<span>领优惠券</span>
+							<input type="number" name="getYouhuiquan">
+							<span>旺旺聊天</span>
+							<input type="number" name="wangwangChat">
+							<span>其他截图</span>
+							<input type="number" name="qitajietu">
+							<span>（开团提醒，开抢提醒）</span>
+						</div>
+					</div>
+					<span>是够货比三家：</span>
+					<input type="radio" name="huobisanjia" value="false" checked>不需要
+					<input type="radio" name="huobisanjia" value="true">需要
+					<br>
+					<span>特殊要求备注:</span>
+					<br>
+					<textarea name="specailNeed" cols="100" rows="5"></textarea>
+					<br>
+					<span>任务清单:</span>
+					<br>
+					<div class="head">
+						<div>类型</div>
+						<div>单价</div>
+						<div>数量</div>
+						<div>费用</div>
+					</div>
+					<div class="liulanNumber detail">
+						<div>浏览数量</div>
+						<div class="one">0.6</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="collectProduct detail">
+						<div>收藏商品</div>
+						<div class="one">0.6</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="collectShop detail">
+						<div>收藏店铺</div>
+						<div class="one">0.5</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="addCar detail">
+						<div>加购物车</div>
+						<div class="one">0.6</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="liulanGood detail">
+						<div>浏览好评</div>
+						<div class="one">0.2</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="getYouhuiquan detail">
+						<div>领优惠券</div>
+						<div class="one">0.5</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="wangwangChat detail">
+						<div>聊天</div>
+						<div class="one">0.5</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<div class="qitajietu detail">
+						<div>其他花费</div>
+						<div class="one">0.3</div>
+						<div class="number">0</div>
+						<div class="price">0</div>
+					</div>
+					<br>
+					<div><span>总计：</span><span class="total">0</span><span>元</span></div>
+					<a href="javascript:;" class="third_last">上一步</a>	
+					<a href="javascript:;" class="third_next">下一步</a>	
+				</div>
+			</div>
+			<div class="fourth_step" style="display: none;">
+				<h3>4、增值服务，支付</h3>
+				<div class="fourth_content">
+							<span>区域限制：可多选，最多选择30项(注意:限制不可接地区)</span>
+							<br>
+							<div class="chooseArea">
+							<!-- <input type="checkbox" value="华东"/>华东 -->
+									<input type="checkbox" name="district_cn" value="上海"/>上海
+									<input type="checkbox" name="district_cn" value="江苏"/>江苏
+									<input type="checkbox" name="district_cn" value="浙江"/>浙江
+									<input type="checkbox" name="district_cn" value="安徽"/>安徽
+									<input type="checkbox" name="district_cn" value="江西"/>江西
+									<br>
+									<!-- <input type="checkbox" value="华北"/>华北 -->
+									<input type="checkbox" name="district_cn" value="北京"/>北京
+									<input type="checkbox" name="district_cn" value="天津"/>天津
+									<input type="checkbox" name="district_cn" value="河北"/>河北
+									<input type="checkbox" name="district_cn" value="山东"/>山东
+									<input type="checkbox" name="district_cn" value="山西"/>山西
+									<input type="checkbox" name="district_cn" value="内蒙古"/>内蒙古
+									<br>
+									<!-- <input type="checkbox" value="华中"/>华中 -->
+									<input type="checkbox" name="district_cn" value="湖北"/>湖北
+									<input type="checkbox" name="district_cn" value="湖南"/>湖南
+									<input type="checkbox" name="district_cn" value="河南"/>河南
+									<br>
+									<!-- <input type="checkbox" value="华南"/>华南 -->
+									<input type="checkbox" name="district_cn" value="广东"/>广东
+									<input type="checkbox" name="district_cn" value="广西"/>广西
+									<input type="checkbox" name="district_cn" value="福建"/>福建
+									<input type="checkbox" name="district_cn" value="海南"/>海南
+									<br>
+									<!-- <input type="checkbox" value="东北"/>东北 -->
+									<input type="checkbox" name="district_cn" value="辽宁"/>辽宁
+									<input type="checkbox" name="district_cn" value="吉林"/>吉林
+									<input type="checkbox" name="district_cn" value="黑龙江"/>黑龙江
+									<br>
+									<!-- <input type="checkbox" value="西北"/>西北 -->
+									<input type="checkbox" name="district_cn" value="陕西"/>陕西
+									<input type="checkbox" name="district_cn" value="甘肃"/>甘肃
+									<input type="checkbox" name="district_cn" value="宁夏"/>宁夏
+									<input type="checkbox" name="district_cn" value="新疆"/>新疆
+									<input type="checkbox" name="district_cn" value="青海"/>青海
+									<br>
+									<!-- <input type="checkbox" value="西南"/>西南 -->
+									<input type="checkbox" name="district_cn" value="四川"/>四川
+									<input type="checkbox" name="district_cn" value="重庆"/>重庆
+									<input type="checkbox" name="district_cn" value="贵州"/>贵州
+									<input type="checkbox" name="district_cn" value="云南"/>云南
+									<input type="checkbox" name="district_cn" value="西藏"/>西藏
+							</div>
+
+							<span>选择性别：</span>
+							<input type="radio" name="gender" value="不限" checked="">不限
+							<input type="radio" name="gender" value="男">男
+							<input type="radio" name="gender" value="女">女
+							<br>
+
+							<span>年龄阶段：</span>
+							<input type="radio" name="ageLimit" value="0" checked="">不限
+							<input type="radio" name="ageLimit" value="1">0-17岁
+							<input type="radio" name="ageLimit" value="2">18-24岁
+							<input type="radio" name="ageLimit" value="3">25-29岁
+							<input type="radio" name="ageLimit" value="4">25-29岁
+							<input type="radio" name="ageLimit" value="5">30-34岁
+							<input type="radio" name="ageLimit" value="6">35-39岁
+							<input type="radio" name="ageLimit" value="7">40+岁
+							<br>
+
+							<span>购物类目：（最多选4项）</span>
+							<br>
+							<div class="chooseCommdity">
+								<input type="checkbox" name="commdityType" value="" checked="">不限
+								<input type="checkbox" name="commdityType" value="CLOTHING_SHOES_PACKAGE">服装鞋包
+								<input type="checkbox" name="commdityType" value="MOBILE_DIGITAL">手机数码
+								<input type="checkbox" name="commdityType" value="APPLIANCE">家用电器
+								<input type="checkbox" name="commdityType" value="MAQUILLAGE">美妆饰品
+								<input type="checkbox" name="commdityType" value="ARTISLES_FOR_BABY">母婴用品
+								<input type="checkbox" name="commdityType" value="BULDING_MATERIALS">家居建材
+								<input type="checkbox" name="commdityType" value="GOODS_FOOD">百货食品
+								<input type="checkbox" name="commdityType" value="OUTDOOR_SPORTS">运动户外
+								<input type="checkbox" name="commdityType" value="CULTURE_RECREAT">文化玩娱
+								<input type="checkbox" name="commdityType" value="LIFE_SERVICE">生活服务
+								<input type="checkbox" name="commdityType" value="CAR_PARTS">汽摩配件
+								<input type="checkbox" name="commdityType" value="VIRTUAL_GOODS">游戏话费
+								<input type="checkbox" name="commdityType" value="OTHER">其他
+							</div>		
+
+							<span>时间优化：</span>
+							<input type="radio" name="browseTime" value="0" checked="">不限	
+							<input type="radio" name="browseTime" value="1">上午优先	
+							<input type="radio" name="browseTime" value="2">下午优先	
+							<input type="radio" name="browseTime" value="3">晚上优先	
+							<input type="radio" name="browseTime" value="4">快速发布	
+							<input type="radio" name="browseTime" value="5">极速发布
+							<br>
+
+							<span>信用等级</span>
+							<select name="creditLimit" id="creditLimit">
+								<option value="" selected="">不限</option>
+								<option value="HEART_1">红心1</option>
+								<option value="HEART_2">红心2</option>
+								<option value="HEART_3">红心3</option>
+								<option value="HEART_4">红心4</option>
+								<option value="HEART_5">红心5</option>
+								<option value="BRICK_1">钻石1</option>
+								<option value="BRICK_2">钻石2</option>
+								<option value="BRICK_3">钻石3</option>
+								<option value="BRICK_4">钻石4</option>
+								<option value="BRICK_5">钻石5</option>
+								<option value="CROWN_1">皇冠1</option>
+								<option value="CROWN_2">皇冠2</option>
+								<option value="CROWN_3">皇冠3</option>
+								<option value="CROWN_4">皇冠4</option>
+								<option value="CROWN_5">皇冠5</option>
+							</select>
+							<br>
+
+							<span>淘气值限制</span>
+							<select id="taoqizhiLimit" name="taoqizhiLimit" aria-invalid="false">
+								<option value="" selected="">不限</option>
+								<option value="500">500以上</option>
+								<option value="700">700以上</option>
+								<option value="1000">1000以上</option>
+							</select>
+							<span>(淘气值500以上1毛/单，700以上2毛/单，1000以上3毛/单)</span>
+							<br>
+
+							<span>任务加赏</span>	
+							<select id="rewardIngot" name="rewardIngot">
+								<option value="0">不加赏</option>
+								<option value="0.1">0.1金币</option>
+								<option value="0.2">0.2金币</option>
+								<option value="0.3">0.3金币</option>
+								<option value="0.4">0.4金币</option>
+								<option value="0.5">0.5金币</option>
+								<option value="0.6">0.6金币</option>
+								<option value="0.7">0.7金币</option>
+								<option value="0.8">0.8金币</option>
+								<option value="0.9">0.9金币</option>
+								<option value="1">1金币</option>
+							</select>
+							<br>
+
+							<span>连续发布天数</span>
+							<select id="days" name="days">
+								<option value="1">1天</option>
+								<option value="2">2天</option>
+								<option value="3">3天</option>
+								<option value="4">4天</option>
+								<option value="5">5天</option>
+								<option value="6">6天</option>
+								<option value="7">7天</option>
+								<option value="10">10天</option>
+								<option value="14">14天</option>
+							</select>
+							<span>在每日的任务数量的基础上，连续发布多天。每日凌晨自动发布，押金余额不足时不发布。
+							</span>
+							<br>
+
+							<span>每天增长比例:</span>
+							<input type="number" name="publishRate" value="0">
+							<span>% 例如关键词任务数量100，每天增长10%，第二天任务数量为110，第三天120，第四天130...</span>
+							<br>
+
+							<span>发布时间设置:</span>
+							<span>每天放任务从</span>
+							<select id="taskStartTime" name="taskStartTime">
+								<option value="1">1点</option>
+								<option value="2">2点</option>
+								<option value="3">3点</option>
+								<option value="4">4点</option>
+								<option value="5">5点</option>
+								<option value="6" selected="">6点</option>
+								<option value="7">7点</option>
+								<option value="8">8点</option>
+								<option value="9">9点</option>
+								<option value="10">10点</option>
+								<option value="11">11点</option>
+								<option value="12">12点</option>
+								<option value="13">13点</option>
+								<option value="14">14点</option>
+								<option value="15">15点</option>
+								<option value="16">16点</option>
+								<option value="17">17点</option>
+								<option value="18">18点</option>
+								<option value="19">19点</option>
+								<option value="20">20点</option>
+								<option value="21">21点</option>
+								<option value="22">22点</option>
+								<option value="23">23点</option>
+							</select>
+							<span>00分到</span>
+							<select id="taskEndTime" name="taskEndTime">
+								<option value="1">1点</option>
+								<option value="2">2点</option>
+								<option value="3">3点</option>
+								<option value="4">4点</option>
+								<option value="5">5点</option>
+								<option value="6">6点</option>
+								<option value="7">7点</option>
+								<option value="8">8点</option>
+								<option value="9">9点</option>
+								<option value="10">10点</option>
+								<option value="11">11点</option>
+								<option value="12">12点</option>
+								<option value="13">13点</option>
+								<option value="14">14点</option>
+								<option value="15">15点</option>
+								<option value="16">16点</option>
+								<option value="17">17点</option>
+								<option value="18">18点</option>
+								<option value="19">19点</option>
+								<option value="20">20点</option>
+								<option value="21">21点</option>
+								<option value="22" selected="">22点</option>
+								<option value="23">23点</option>
+								<option value="24">24点</option>
+							</select>
+							<span>00分</span>
+							<span style="color: red;">设置非极速任务在某个时间段内发布</span>
+							<br>
+
+							<span>任务清单:</span>
+							<br>
+							<div class="head">
+								<div>类型</div>
+								<div>单价</div>
+								<div>数量</div>
+								<div>费用</div>
+							</div>
+							<div class="liulanNumber detail">
+								<div>浏览数量</div>
+								<div class="one">0.6</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="collectProduct detail">
+								<div>收藏商品</div>
+								<div class="one">0.6</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="collectShop detail">
+								<div>收藏店铺</div>
+								<div class="one">0.5</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="addCar detail">
+								<div>加购物车</div>
+								<div class="one">0.6</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="liulanGood detail">
+								<div>浏览好评</div>
+								<div class="one">0.2</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="getYouhuiquan detail">
+								<div>领优惠券</div>
+								<div class="one">0.5</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="wangwangChat detail">
+								<div>聊天</div>
+								<div class="one">0.5</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<div class="qitajietu detail">
+								<div>其他花费</div>
+								<div class="one">0.3</div>
+								<div class="number">0</div>
+								<div class="price">0</div>
+							</div>
+							<span>增值服务花费:</span>
+							<div class="zengzhi">
+								<div class="district_cn detail">
+									<div>区域限制</div>
+									<div class="one">0.1</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="gender detail">
+									<div>性别限制</div>
+									<div class="one">0.1</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="browseTime detail">
+									<div>浏览时间优化</div>
+									<div class="one">0.1</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="creditLimit detail">
+									<div>信用等级</div>
+									<div class="one">0.1</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="taoqizhiLimit detail">
+									<div>淘气值限制</div>
+									<div class="one">0</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="rewardIngot detail">
+									<div>加赏</div>
+									<div class="one">0</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="ageLimit detail">
+									<div>年龄限制</div>
+									<div class="one">0.1</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+								<div class="commdityType detail">
+									<div>购物类目</div>
+									<div class="one">0.1</div>
+									<div class="number">0</div>
+									<div class="price">0</div>
+								</div>
+							</div>
+							<span>金币余额：123</span>
+							<div><span>总计：</span><span class="Total">0</span><span>元</span></div>
+							<a href="javascript:;" class="fourth_last">上一步</a>	
+							<a href="javascript:;" class="fourth_next">确认发布</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<!-- <script src="../public/javascripts/main.js"></script> -->
+	<script src="../public/javascripts/plupload/plupload.full.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/publishFlow.js"></script>
+</body>
+</html>

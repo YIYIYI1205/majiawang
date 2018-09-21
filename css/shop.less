@@ -1,0 +1,45 @@
+.tip{
+	margin: 20px;
+}
+.bindShop{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	a{
+		text-decoration: none;
+		border: 1px solid #aaa;
+		padding: 20px;
+		width: 100px;
+		margin: 0 auto;
+	}
+	a:hover{
+		color:black;
+	}
+	span{
+		font-size: 10px;
+		margin: 10px;
+	}
+}
+.head,.shop-content{
+	display: flex;
+	text-align: center;
+	width: 100%;
+	margin: 10px 0;
+	border-bottom:2px solid #f46c00; 
+	div,a{
+		flex: 1;
+	}
+}
+.alertWindow{
+	position:fixed;
+    left:300px;
+    top:50px;
+    width:40%;
+    height:65%;
+    background-color:#F0F0F0;
+    z-index:10;
+    // display:none;
+    display:block;
+    opacity:1;
+    filter:alpha(opacity=70);
+}

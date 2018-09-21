@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定新店铺</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/bind_shop.css">
+	<link rel="stylesheet" href="../css/mobiscroll.scroller.css">
+	<link href="../css/mobiscroll.scroller.android-ics.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="content">
+		<div class="left">
+			<ul class="shop">
+				<li class="fixed">我是商家</li>
+				<li>个人中心</li>
+				<li>绑定店铺</li>
+				<li>我的工单</li>
+			</ul>
+			<ul class="flowTask">
+				<li class="fixed">流量任务</li>
+				<li>发布流量任务</li>
+				<li>我的流量任务</li>
+				<li>截图监控</li>
+			</ul>
+			<ul class="task">
+				<li class="fixed">垫付任务</li>
+				<li>发布补单</li>
+				<li>我的任务</li>
+				<li>账单管理</li>
+				<li>历史账单管理</li>
+				<li>订单审核</li>
+				<li>我的快递</li>
+				<li>发布好评</li>
+				<li>评价审核</li>
+				<li>催下单/收货</li>
+			</ul>
+			<ul class="money">
+				<li class="fixed">财务中心</li>
+				<li>账单充值</li>
+				<li>提现管理</li>
+				<li>会员续费</li>
+				<li>资金记录</li>
+			</ul>
+			<ul class="qita">
+				<li class="fixed">其他</li>
+				<li>邀请好友</li>
+			</ul>
+		</div>
+		<div class="right">
+			<h3>绑定新店铺</h3>
+			<div class="write">
+				<div>店铺首页网址（店铺绑定后无法修改）</div>
+				<input type="url" name="shop_url">
+				<div>店铺名称（绑定后无法修改）</div>
+				<input type="text" name="shop_name">
+				<div>掌柜名称（绑定后无法修改）</div>
+				<input type="text" name="zhanggui_name">
+				<div>发件人姓名：</div>
+				<input type="text" name="fajianren_name">
+				<div>发件人电话：</div>
+				<input type="number" name="fajianren_number">
+				<div>发件人地址：</div>
+				<input id="area" placeholder="请选择所在地区" areaid="" readonly="" class="">
+				<div>发件人街道：</div>
+				<input type="text" name="fajianren_jiedao">
+				<a href="#" class="submit">确定</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/bindshop.js"></script>
+	<script src="../js/zepto.js"></script>
+	<script src="../js/mobiscroll.zepto.js" type="text/javascript"></script>
+	<script src="../js/mobiscroll.core.js" type="text/javascript"></script>
+	<script src="../js/mobiscroll.scroller.js" type="text/javascript"></script>
+	<script src="../js/mobiscroll.area.js"></script>
+	<script src="../js/mobiscroll.i18n.zh.js"></script>
+</body>
+</html>

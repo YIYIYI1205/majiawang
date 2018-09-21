@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/personalCenter.css">
+</head>
+<body>
+	<div class="content">
+		<div class="left">
+			<ul class="shop">
+				<li class="fixed">我是商家</li>
+				<li>个人中心</li>
+				<li>绑定店铺</li>
+				<li>我的工单</li>
+			</ul>
+			<ul class="flowTask">
+				<li class="fixed">流量任务</li>
+				<li>发布流量任务</li>
+				<li>我的流量任务</li>
+				<li>截图监控</li>
+			</ul>
+			<ul class="task">
+				<li class="fixed">垫付任务</li>
+				<li>发布补单</li>
+				<li>我的任务</li>
+				<li>账单管理</li>
+				<li>历史账单管理</li>
+				<li>订单审核</li>
+				<li>我的快递</li>
+				<li>发布好评</li>
+				<li>评价审核</li>
+				<li>催下单/收货</li>
+			</ul>
+			<ul class="money">
+				<li class="fixed">财务中心</li>
+				<li>账单充值</li>
+				<li>提现管理</li>
+				<li>会员续费</li>
+				<li>资金记录</li>
+			</ul>
+			<ul class="qita">
+				<li class="fixed">其他</li>
+				<li>邀请好友</li>
+			</ul>
+		</div>
+		<div class="right">
+			<h3>个人信息</h3>
+			<div class="detail">
+				<div class="login">
+					<span>登录密码</span>
+					<a href="./changePassword.html">修改</a>
+					<span style="margin-left:120px;">支付密码</span>
+					<span style="margin-left:20px;" class="get">未设置</span>
+					<a href="./AddPayPassword.html">添加(修改)</a>
+				</div>	
+				<div class="telephone">
+					<span>手机号：</span>
+					<span class="get">5123789128736</span>
+					<a href="#" id="telephone">修改</a>
+				</div>
+				<div class="weixin">
+					<span>微信号：</span>
+					<span class="get">5123789128736</span>
+					<a href="#" id="weixin">修改</a>
+				</div>
+			</div>
+			<h3>我的财务情况</h3>
+			<div class="detail">
+				<div class="money">
+					<span>可用金币:</span>
+					<span class="get">123</span>
+					<a href="#" id="chongzhi">充值金币</a>
+					<a href="#" id="publish">发布垫付任务</a>
+					<a href="#" id="publishFlow">发布流量任务</a>
+				</div>	
+				<div class="invite">
+					<span>邀请总奖励:</span>
+					<span class="get">123</span>
+					<a href="#" id="invite">邀请用户，赚取金币</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/personalCenter.js"></script>
+</body>
+</html>
